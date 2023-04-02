@@ -32,7 +32,7 @@ async function fetchSummary(postUrl, statusUrl) {
   if (response.status == 'completed') {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('summary').style.display = 'block';
-    document.getElementById('summary').innerHTML = response.summary;
+    document.getElementById('summary').textContent = response.summary;
     return;
   }
 
@@ -52,7 +52,7 @@ async function fetchSummary(postUrl, statusUrl) {
     if (response.status == 'completed') {
       document.getElementById('loading').style.display = 'none';
       document.getElementById('summary').style.display = 'block';
-      document.getElementById('summary').innerHTML = response.summary;
+      document.getElementById('summary').textContent = response.summary;
       return;
     }
 
