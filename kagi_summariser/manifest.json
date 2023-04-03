@@ -1,0 +1,28 @@
+{
+
+  "description": "Kagi Universal Summariser Firefox Extension",
+  "manifest_version": 2,
+  "name": "Summariser",
+  "version": "0.2",
+  "homepage_url": "https://github.com/lucashadfield/kagi_summariser_extension",
+  "icons": {
+    "48": "icons/summariser_logo_48.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "<all_urls>"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/summariser_logo_32.png",
+    "theme_icons": [{
+      "light": "icons/summariser_logo_32.png",
+      "dark": "icons/summariser_logo_32.png",
+      "size": 32
+    }],
+    "default_title": "Summarise Page",
+    "default_popup": "popup/summariser.html"
+  }
+}
