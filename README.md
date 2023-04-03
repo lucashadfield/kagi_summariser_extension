@@ -1,4 +1,4 @@
-# Kagi Summarizer Extension
+# Kagi Summariser Extension
 
 Firefox extension that calls [Kagi Universal Summarizer](https://kagi.com/summarizer/index.html) with the currently open page URL.
 

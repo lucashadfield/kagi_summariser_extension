@@ -32,7 +32,7 @@ async function fetchSummary(postUrl, statusUrl) {
   if (response.status == 'completed') {
     document.getElementById('loading').style.display = 'none';
     document.getElementById('summary').style.display = 'block';
-    document.getElementById('summary').textContent = response.summary;
+    document.getElementById('summary').textContent = response.summary.replace(/&#x27;/g, "'");
     return;
   }
 
@@ -43,6 +43,7 @@ async function fetchSummary(postUrl, statusUrl) {
 
   document.getElementById('loading').style.display = 'flex';
   document.getElementById('summary').style.display = 'none';
+  document.getElementById('status').textContent = 'Submitting';
 
   await postData(postUrl, data);
 
@@ -52,11 +53,11 @@ async function fetchSummary(postUrl, statusUrl) {
     if (response.status == 'completed') {
       document.getElementById('loading').style.display = 'none';
       document.getElementById('summary').style.display = 'block';
-      document.getElementById('summary').textContent = response.summary;
+      document.getElementById('summary').textContent = response.summary.replace(/&#x27;/g, "'");
       return;
     }
 
-//    document.getElementById('status').innerHTML = response.status;
+    document.getElementById('status').textContent = response.status;
     await new Promise(r => setTimeout(r, 1000));
   }
 }

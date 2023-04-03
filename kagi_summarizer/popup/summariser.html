@@ -20,10 +20,16 @@
 
       #loading, #summary {
         width: 400px;
-        min-height: 400px;
-        max-height: 800px;
+        height: 400px;
         padding: 20px;
         overflow: scroll;
+      }
+
+      .spinner-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       @keyframes spin {
@@ -38,11 +44,13 @@
 </head>
 <body>
 <div class="loading" id="loading">
-    <div class="spinner"></div>
-    <p id="status"></p>
+    <div class="spinner-container">
+        <div class="spinner"></div>
+        <p id="status">Checking</p>
+    </div>
 </div>
 <div id="summary" style="display: none;"></div>
 
-<script src="summarizer.js"></script>
+<script src="summariser.js"></script>
 </body>
 </html>
