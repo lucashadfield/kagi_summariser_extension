@@ -3,7 +3,7 @@
   "description": "Kagi Universal Summariser Firefox Extension",
   "manifest_version": 2,
   "name": "Summariser",
-  "version": "0.3",
+  "version": "0.4",
   "homepage_url": "https://github.com/lucashadfield/kagi_summariser_extension",
   "icons": {
     "48": "icons/summariser_logo_48.png"
